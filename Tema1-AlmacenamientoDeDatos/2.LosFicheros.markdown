@@ -24,5 +24,17 @@ Tipos de registros → Tipos de ficheros (de registros):
 - **Indefinido:** en este caso el SO no realiza ninguna gestión sobre la longitud de los registros del fichero. Será el propio programa del usuario el que se encargue de localizar el principio y el final de cada registro.
 
 
+El SO es el que lleva el proceso de desmantelar los programas para poder cargarlos en la RAM.
 
+## 2.2 Tipos de ficheros
+
+- Ficheros permanentes: contienen información relevante para una aplicación (los datos necesarios para el
+funcionamiento de ésta). Su vida es larga y generalmente no pueden generarse de una forma inmediata a
+partir de otros ficheros. Estos se subdividen en:
+
+  1. Ficheros maestros: contienen el estado actual de los datos que pueden modificarse desde la aplicación. Es la parte central de la aplicación, su núcleo. Podría ser un archivo con los datos de los usuarios de una plataforma educativa, un archivo de clientes de un banco, etc.
+
+  2. Ficheros constantes: son aquellos que incluyen datos fijos para la aplicación. No suelen ser modificados (o suele ser infrecuente) y se accede a ellos para la realización de consultas. Podría ser un archivo con códigos postales, la ubicación de estantes en una biblioteca, una tabla de números primos, etc.
+
+  3. Ficheros históricos: contienen datos que fueron considerados como actuales en un periodo o situación anterior. Se utilizan para la reconstrucción de situaciones (actual o anteriores). Podría ser un archivo con los usuarios que han sido dados de baja en la plataforma educativa.
 
