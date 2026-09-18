@@ -18,7 +18,7 @@ Un registro se guarda en una memoria con el orden.
 Tipos de registros → Tipos de ficheros (de registros):
 - **Longitud fija:** la suma de las longitudes de cada campo (en caracteres) es siempre la misma.
 - **Longitud variable (longitudes de los campos no siempre es la misma):** el sistema reserva una palabra al comienzo de cada registro para anotar su longitud.
-- **Delimitados:** el sistema incluye un carácter especial al final de cada registro.
+- **Delimitados:** el sistema in    uye un carácter especial al final de cada registro.
 - **Indefinido:** en este caso el SO no realiza ninguna gestión sobre la longitud de los registros del fichero. Será el propio programa del usuario el que se encargue de localizar el principio y el final de cada registro.
 
 
@@ -91,3 +91,12 @@ Otras características relevantes de los ficheros secuenciales son:
 
 //
 
+### 2.5.3 Organización secuencial indexada
+
+Un fichero con esta organizacion está dividido en 3:
+
+- Zona de registros:
+
+- Zona índices:
+
+- Zona de desbordamiento:
