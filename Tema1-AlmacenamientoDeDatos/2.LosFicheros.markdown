@@ -15,8 +15,6 @@ Un registro se guarda en una memoria con el orden.
 
 
 
-
-
 Tipos de registros → Tipos de ficheros (de registros):
 - **Longitud fija:** la suma de las longitudes de cada campo (en caracteres) es siempre la misma.
 - **Longitud variable (longitudes de los campos no siempre es la misma):** el sistema reserva una palabra al comienzo de cada registro para anotar su longitud.
@@ -37,4 +35,59 @@ partir de otros ficheros. Estos se subdividen en:
   2. Ficheros constantes: son aquellos que incluyen datos fijos para la aplicación. No suelen ser modificados (o suele ser infrecuente) y se accede a ellos para la realización de consultas. Podría ser un archivo con códigos postales, la ubicación de estantes en una biblioteca, una tabla de números primos, etc.
 
   3. Ficheros históricos: contienen datos que fueron considerados como actuales en un periodo o situación anterior. Se utilizan para la reconstrucción de situaciones (actual o anteriores). Podría ser un archivo con los usuarios que han sido dados de baja en la plataforma educativa.
+
+- Ficheros temporales:  se utilizan para almacenar información útil para una parte de la aplicación, no para
+toda ella. Son generados a partir de datos de ficheros permanentes. Tienen un corto periodo de existencia. Estos se subdividen en:
+  1. Ficheros intermedios: almacenan resultados de una aplicación que serán utilizados por otra, dentro de una misma tarea.
+
+  2. Ficheros de maniobras: almacenan datos de una aplicación que no pueden ser mantenidos en memoria principal por falta de espacio.
+
+  3. Ficheros de resultados: almacenan datos que van a ser transferidos a un dispositivo de salida.
+
+## 2.3 Los soportes de información
+
+Los ficheros se almacenan en **soportes** de información manejados por dispositivos (periféricos del ordenador), que permiten leer y grabar datos en el soporte.
+
+- **Soportes de acceso secuencial o no direccionables** (ej.: cintas magnéticas):
+
+ Se suelen usar en copias de seguridad y si se desea leer un dato que está en la mitad, se tendrá que leer todo lo que hay hasta llegar a esa posición.
+
+- **Soportes de acceso directo o direccionables** (ej.: discos): 
+
+ Son los más empleados y el acceso a los datos puede hacerse de forma directa, pudiendo acceder directamente a la posición que interese y leer a partir de ella (no es necesario recorrer o leer otros bloques).
+
+
+
+## 2.4 Parámetros de utilización
+
+## 2.5 Organización de ficheros
+
+Los objetivos fundamentales de estas modificaciones pueden resumirse en los siguientes puntos:
+
+1. Proporcionar un acceso rápido a los registros.
+2. Conseguir economizar el almacenamiento.
+3. Facilitar la actualización de los registros.
+4. Permitir que la estructura refleje la organización real de la información.
+
+### 2.5.1 Organización Secuencial:
+
+Un fichero con organización secuencial se caracteriza porque sus registros están almacenados de manera, que la única forma de acceder a él, es leyendo un registro tras otro desde el principio hasta
+el final. 
+
+*Este tipo de ficheros pueden utilizar dispositivos o soportes no direccionables o de acceso secuencial, como son las cintas magnéticas. También se utilizan en los CD de audio y los DVD de vídeo, en los que la música o las imágenes se almacenan a lo largo de una espiral continua.*
+
+Otras características relevantes de los ficheros secuenciales son:
+
+- La lectura siempre se realiza hacia delante.
+- Tienen una estructura rígida de campos, es decir, la posición de los campos de cada registro siempre ha deser la misma.
+- Son ficheros monousuario, no permiten el acceso simultáneo de varios usuarios.
+- Aprovechan al máximo el soporte de almacenamiento, al no dejar huecos vacíos.
+- Se pueden grabar en cualquier tipo de soporte, tanto en secuenciales como direccionables.
+- Todos los lenguajes de programación disponen de instrucciones para trabajar con este tipo de ficheros.
+- No se pueden insertar registros entre los que ya están grabados.
+
+
+### 2.5.2 Organización secuencial encadenada
+
+//
 
