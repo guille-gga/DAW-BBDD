@@ -60,6 +60,8 @@ Los ficheros se almacenan en **soportes** de información manejados por disposit
 
 ## 2.4 Parámetros de utilización
 
+//
+
 ## 2.5 Organización de ficheros
 
 Los objetivos fundamentales de estas modificaciones pueden resumirse en los siguientes puntos:
@@ -100,3 +102,51 @@ Un fichero con esta organizacion está dividido en 3:
 - Zona índices:
 
 - Zona de desbordamiento:
+
+### 2.5.4 Organización directa o aleatoria
+
+En este tipo de ficheros se puede acceder a un registro indicando la posición relativa del mismo dentro del
+archivo o, más comúnmente, a través de una clave
+
+**Campo clave:** Campo que permite identificar y localizar un registro de manera ágil y organizada.
+
+Algunas características fundamentales de los ficheros de acceso directo o aleatorio son:
+- Posicionamiento inmediato.
+- Registros de longitud fija.
+- Permiten múltiples usuarios utilizándolos.
+- Los registros se borran colocando un cero en la posición que ocupan.
+- Permiten la utilización de algoritmos de compactación de huecos.
+- Esta organización sólo es posible en soportes direccionables.
+- Los archivos se crean con un tamaño definido, es decir, con un máximo de registros establecido durante la reación.
+- Se usan cuando el acceso a los datos de un registro se hace siempre empleando la misma clave y la velocidad de acceso a un registro es lo que más importa.
+- Permiten la actualización de los registros en el mismo fichero, sin necesidad de copiar el fichero.
+- Permiten realizar procesos de actualización en tiempo real.
+
+**X**= Clave
+**Y**= Posición
+
+xmod5 --> Resto de una división
+
+
+
+**A. Direccionamiento  directo**
+//
+**B. Direccionamiento  asociado**
+//
+**C. Direccionamiento  calculado (Hashing)**
+//
+
+## 2.6 Inconvenientes de los sistemas de gestión de ficheros.
+
+En estos sistemas de gestión de ficheros, la definición de los datos se encuentra codificada dentro de los programas en lugar de almacenarse de forma independiente, y además el control del acceso y la manipulación de los datos vienen impuestos por los programas.
+
+Inconvenientes de los sistemas de gestión de ficheros:
+- Redundancia e inconsistencia de los datos: los ficheros son creados por distintos programas y van cambiando con el tiempo, por lo que pueden tener distintos formatos y los datos pueden estar duplicados.
+- Dependencia de los datos física-lógica: la estructura física de los datos (definición de ficheros y registros) se encuentra codificada-asociada en los programas.
+- Dificultad para tener acceso a los datos: cada vez que se necesite una consulta no prevista es necesario codificar un nuevo programa.
+- Separación y aislamiento de los datos: al estar repartidos en varios ficheros con diferentes formatos, es difícil escribir nuevos programas que aseguren la manipulación correcta de los datos.
+- Dificultad para el acceso concurrente: es complicado que los usuarios actualicen los datos simultáneamente.
+- Dependencia de la estructura del fichero con el lenguaje de programación: la estructura se define dentro de los programas, la incompatibilidad entre ficheros generados por distintos lenguajes de programación hace que los datos sean difíciles de procesar.
+- Problemas en la seguridad de los datos: difícil implantar restricciones de seguridad ya que las aplicaciones se van añadiendo al sistema según se van necesitando.
+- Problemas de integridad de datos: los valores almacenados en los ficheros deben cumplir con restricciones de consistencia (no se puede crear un pedido si el cliente no existe).
+
