@@ -17,14 +17,14 @@
 
 ## Entrar por nombre *servdb*
 
-docker
+1. docker
 
-docker pull mysql
-latest
+2. docker pull mysql
+   latest
 
-docker run -dmysql
+3. docker run -dmysql
 
-docker run -d -e MYSQL_ROOT_PASSWORD=root1 -p 3306:3306 --name servdb mysql
+4.   docker run -d -e MYSQL_ROOT_PASSWORD=root1 -p 3306:3306 --name servdb mysql
 
 docker ps -a
 
