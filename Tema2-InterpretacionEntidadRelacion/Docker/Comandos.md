@@ -29,7 +29,7 @@
 
 5. docker ps -a
 
-6. docker exec -it 98848fcfbfb1 /bin/bash
+6. docker exec -it servdb /bin/bash
 
 
 ## Parar contenedor
