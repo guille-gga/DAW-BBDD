@@ -1,7 +1,7 @@
 
 ## Entrar por code
 
-docker
+'docker'
 
 docker pull mysql
 latest
@@ -15,7 +15,7 @@ docker ps -a
 docker exec -it 98848fcfbfb1 /bin/bash
 
 
-##Entrar por nombre *servdb*
+## Entrar por nombre *servdb*
 
 docker
 
