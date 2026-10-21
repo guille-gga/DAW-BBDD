@@ -5,6 +5,7 @@
      - Salvar config Server mariadb /etc/mysql/conf.d
 
 3.Parametros:
+
     - -e MARIADB_ROOT_PASSWORD=contraseña
     - --name minombre
     - -it , -d, -p ....: 3306
