@@ -10,3 +10,7 @@
     - --name minombre
     - -it , -d, -p ....: 3306
     - -v /home/usuario/subir:subir
+
+
+docker run -d -it --name nombre -p 3306:3306 -e MARIADB_ROOT_PASSWORD=root1 -v /home/usuario/carpeta : /var/lib/mysql:z 
+-v /home/usuario/subir: /subir
