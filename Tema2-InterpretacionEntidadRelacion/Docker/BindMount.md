@@ -1,8 +1,9 @@
+## En GGA
 1. sudo useradd -m nombreuser
 2. sudo passwd 12345
 3. su
 
-
+## En nombreuser
 1. bash
 2. su
 3. usermod -aG docker nombreuser
